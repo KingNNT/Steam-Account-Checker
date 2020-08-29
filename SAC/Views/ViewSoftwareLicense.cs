@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SAC
+namespace SAC.Views
 {
     public partial class ViewSoftwareLicense : Form
     {

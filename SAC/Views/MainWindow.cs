@@ -1,11 +1,12 @@
 ﻿using SAC.HelperClasses;
-using SAC.Properties;
 using System;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
+using SAC.Models;
+using SteamAccountChecker.Properties;
 
-namespace SAC
+namespace SAC.Views
 {
     public partial class MainWindow : Form
     {
@@ -37,18 +38,6 @@ namespace SAC
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e) => Application.Exit();
-
-
-
-
-
-
-
-
-
-
-
-
 
         private void ButtonStart_Click(object sender, EventArgs e)
         {

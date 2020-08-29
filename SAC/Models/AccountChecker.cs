@@ -3,7 +3,7 @@ using SteamKit2;
 using System;
 using System.Windows.Forms;
 
-namespace SAC
+namespace SAC.Models
 {
     class AccountChecker
     {

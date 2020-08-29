@@ -1,4 +1,4 @@
-﻿namespace SAC
+﻿namespace SAC.Views
 {
     partial class MainWindow
     {

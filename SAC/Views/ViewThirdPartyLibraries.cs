@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SAC
+namespace SAC.Views
 {
     public partial class ViewThirdPartyLibraries : Form
     {
@@ -10,4 +10,3 @@ namespace SAC
         private void button1_Click(object sender, EventArgs e) => Close();
     }
 }
-
