@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace SAC.HelperClasses
 {
-    class ClipboardHelper
+    internal class ClipboardHelper
     {
         public static void OpenBrowser()
         {

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace SAC.HelperClasses
 {
-    class WindowsDialogsHelper
+    internal class WindowsDialogsHelper
     {
         public static void FindPlaceToExport()
         {

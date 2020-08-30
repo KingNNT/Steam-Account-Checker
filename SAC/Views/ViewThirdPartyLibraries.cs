@@ -8,6 +8,5 @@ namespace SAC.Views
         public ViewThirdPartyLibraries() => InitializeComponent();
 
         private void btnOK_Click(object sender, EventArgs e) => Close();
-
     }
 }

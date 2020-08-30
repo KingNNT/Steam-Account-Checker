@@ -1,6 +1,6 @@
 ﻿namespace SAC
 {
-    class Settings
+    internal class Settings
     {
         public static bool showColouredItemsInAccountList = true;
     }

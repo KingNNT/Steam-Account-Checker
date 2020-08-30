@@ -1,15 +1,22 @@
 ﻿namespace SAC.HelperClasses
 {
-    class UIHelper
+    internal class UIHelper
     {
-        delegate void SetVisibleCallback(bool isShown);
-        delegate void SetEnabledCallback(bool isEnabled);
-        delegate void UpdateRemainingLabelCallback(string text);
-        delegate void UpdateLoggableLabelCallback(string text);
-        delegate void UpdateBadLabelCallback(string text);
-        delegate void UpdateSGProtectedLabelCallback(string text);
-        delegate void UpdateCheckedLabelCallback(string text);
-        delegate void UpdateFileTextBoxACCallback(string text);
+        private delegate void SetVisibleCallback(bool isShown);
+
+        private delegate void SetEnabledCallback(bool isEnabled);
+
+        private delegate void UpdateRemainingLabelCallback(string text);
+
+        private delegate void UpdateLoggableLabelCallback(string text);
+
+        private delegate void UpdateBadLabelCallback(string text);
+
+        private delegate void UpdateSGProtectedLabelCallback(string text);
+
+        private delegate void UpdateCheckedLabelCallback(string text);
+
+        private delegate void UpdateFileTextBoxACCallback(string text);
 
         public static void ShowUI(bool isShown)
         {
@@ -90,6 +97,7 @@
             else
                 Program.mw.steamGuardLabel.Text = text;
         }
+
         public static void UpdateCheckedLabel(string text)
         {
             if (Program.mw.InvokeRequired)

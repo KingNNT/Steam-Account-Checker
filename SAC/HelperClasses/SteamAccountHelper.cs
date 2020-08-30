@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace SAC.HelperClasses
 {
-    class SteamAccountHelper
+    internal class SteamAccountHelper
     {
         public static readonly List<string> GoodAccountsList = new List<string>();
         public static readonly List<string> sGProtectedAccountsList = new List<string>();

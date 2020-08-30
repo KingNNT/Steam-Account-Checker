@@ -3,10 +3,11 @@ using System.Windows.Forms;
 
 namespace SAC.HelperClasses
 {
-    class LogHelper
+    internal class LogHelper
     {
-        delegate void SetListAccountsCallback(Result result, string userName, string password, string extendedResultMessage);
-        delegate void SetLogCallback(string output);
+        private delegate void SetListAccountsCallback(Result result, string userName, string password, string extendedResultMessage);
+
+        private delegate void SetLogCallback(string output);
 
         public enum Result
         {
@@ -46,6 +47,7 @@ namespace SAC.HelperClasses
                         successItem.SubItems.Add(extendedResultMessage);
                         Program.mw.listViewResult.Items.Add(successItem);
                         break;
+
                     case Result.SteamGuardProtected:
                         ListViewItem sgProtectedItem = new ListViewItem("🗲");
                         if (Settings.showColouredItemsInAccountList == true)
@@ -55,6 +57,7 @@ namespace SAC.HelperClasses
                         sgProtectedItem.SubItems.Add(extendedResultMessage);
                         Program.mw.listViewResult.Items.Add(sgProtectedItem);
                         break;
+
                     case Result.Fail:
                         ListViewItem failItem = new ListViewItem("✘");
                         if (Settings.showColouredItemsInAccountList == true)
@@ -64,6 +67,7 @@ namespace SAC.HelperClasses
                         failItem.SubItems.Add(extendedResultMessage);
                         Program.mw.listViewResult.Items.Add(failItem);
                         break;
+
                     default:
                         ListViewItem unknownItem = new ListViewItem("???");
                         if (Settings.showColouredItemsInAccountList == true)
@@ -76,7 +80,6 @@ namespace SAC.HelperClasses
                 }
             }
         }
-
 
         public static void LogClear()
         {

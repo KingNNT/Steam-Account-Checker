@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace SAC.HelperClasses
 {
-    class AccountExporterHelper
+    internal class AccountExporterHelper
     {
         public enum WhatToExport
         {
