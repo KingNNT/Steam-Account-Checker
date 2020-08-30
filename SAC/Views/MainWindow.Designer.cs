@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.label1 = new System.Windows.Forms.Label();
-            this.ButtonStart = new System.Windows.Forms.Button();
+            this.btnCheckAccounts = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.tabManualCheck = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtSteamAccountName = new System.Windows.Forms.TextBox();
             this.tabAutomaticCheck = new System.Windows.Forms.TabPage();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnBrowserLocationToExport = new System.Windows.Forms.Button();
             this.textBoxLocalToExport = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnExportSteamGuardProtectedAccount = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.remainingLabel = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -54,32 +54,32 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnExportBadAccount = new System.Windows.Forms.Button();
+            this.btnExportGoodAccount = new System.Windows.Forms.Button();
+            this.btnBrowseFile = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxFile = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.CheckboxShowColouredItemsInAccountList = new System.Windows.Forms.CheckBox();
             this.tabAbout = new System.Windows.Forms.TabPage();
-            this.ButtonSoftwareLicense = new System.Windows.Forms.Button();
-            this.ButtonViewThirdPartyLibraries = new System.Windows.Forms.Button();
+            this.btnSoftwareLicense = new System.Windows.Forms.Button();
+            this.btnViewThirdPartyLibraries = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnContactMe = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.listViewResult = new System.Windows.Forms.ListView();
+            this.StatusColumn = new System.Windows.Forms.ColumnHeader();
+            this.UsernameColumn = new System.Windows.Forms.ColumnHeader();
+            this.PasswordColumn = new System.Windows.Forms.ColumnHeader();
+            this.ResultColumn = new System.Windows.Forms.ColumnHeader();
+            this.ctxMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.whatsHappening = new System.Windows.Forms.ListView();
-            this.StatusColumn = new System.Windows.Forms.ColumnHeader();
-            this.UsernameColumn = new System.Windows.Forms.ColumnHeader();
-            this.PasswordColumn = new System.Windows.Forms.ColumnHeader();
-            this.ResultColumn = new System.Windows.Forms.ColumnHeader();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
@@ -90,14 +90,14 @@
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabControl1.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.tabManualCheck.SuspendLayout();
             this.tabAutomaticCheck.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabSettings.SuspendLayout();
             this.tabAbout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            this.ctxMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loadingImage)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -111,17 +111,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Steam account name:";
             // 
-            // ButtonStart
+            // btnCheckAccounts
             // 
-            this.ButtonStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonStart.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ButtonStart.Location = new System.Drawing.Point(714, 448);
-            this.ButtonStart.Name = "ButtonStart";
-            this.ButtonStart.Size = new System.Drawing.Size(158, 26);
-            this.ButtonStart.TabIndex = 0;
-            this.ButtonStart.Text = "Check for accounts";
-            this.ButtonStart.UseVisualStyleBackColor = true;
-            this.ButtonStart.Click += new System.EventHandler(this.ButtonStart_Click);
+            this.btnCheckAccounts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCheckAccounts.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCheckAccounts.Location = new System.Drawing.Point(714, 448);
+            this.btnCheckAccounts.Name = "btnCheckAccounts";
+            this.btnCheckAccounts.Size = new System.Drawing.Size(158, 26);
+            this.btnCheckAccounts.TabIndex = 0;
+            this.btnCheckAccounts.Text = "Check for accounts";
+            this.btnCheckAccounts.UseVisualStyleBackColor = true;
+            this.btnCheckAccounts.Click += new System.EventHandler(this.ButtonStart_Click);
             // 
             // label2
             // 
@@ -132,28 +132,28 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Password: ";
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabManualCheck);
-            this.tabControl1.Controls.Add(this.tabAutomaticCheck);
-            this.tabControl1.Controls.Add(this.tabSettings);
-            this.tabControl1.Controls.Add(this.tabAbout);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 3;
-            this.tabControl1.Size = new System.Drawing.Size(860, 430);
-            this.tabControl1.TabIndex = 4;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl.Controls.Add(this.tabManualCheck);
+            this.tabControl.Controls.Add(this.tabAutomaticCheck);
+            this.tabControl.Controls.Add(this.tabSettings);
+            this.tabControl.Controls.Add(this.tabAbout);
+            this.tabControl.Location = new System.Drawing.Point(12, 12);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 4;
+            this.tabControl.Size = new System.Drawing.Size(860, 430);
+            this.tabControl.TabIndex = 0;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabManualCheck
             // 
             this.tabManualCheck.BackColor = System.Drawing.Color.White;
             this.tabManualCheck.Controls.Add(this.label5);
-            this.tabManualCheck.Controls.Add(this.textBox2);
-            this.tabManualCheck.Controls.Add(this.textBox1);
+            this.tabManualCheck.Controls.Add(this.txtPassword);
+            this.tabManualCheck.Controls.Add(this.txtSteamAccountName);
             this.tabManualCheck.Controls.Add(this.label2);
             this.tabManualCheck.Controls.Add(this.label1);
             this.tabManualCheck.Location = new System.Drawing.Point(4, 24);
@@ -171,31 +171,31 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Check an account by manually entering an account username and a password";
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(146, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(283, 23);
-            this.textBox2.TabIndex = 5;
+            this.txtPassword.Location = new System.Drawing.Point(146, 99);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(283, 23);
+            this.txtPassword.TabIndex = 5;
             // 
-            // textBox1
+            // txtSteamAccountName
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(283, 23);
-            this.textBox1.TabIndex = 5;
+            this.txtSteamAccountName.Location = new System.Drawing.Point(146, 70);
+            this.txtSteamAccountName.Name = "txtSteamAccountName";
+            this.txtSteamAccountName.Size = new System.Drawing.Size(283, 23);
+            this.txtSteamAccountName.TabIndex = 5;
             // 
             // tabAutomaticCheck
             // 
             this.tabAutomaticCheck.BackColor = System.Drawing.Color.White;
-            this.tabAutomaticCheck.Controls.Add(this.button8);
+            this.tabAutomaticCheck.Controls.Add(this.btnBrowserLocationToExport);
             this.tabAutomaticCheck.Controls.Add(this.textBoxLocalToExport);
             this.tabAutomaticCheck.Controls.Add(this.label11);
-            this.tabAutomaticCheck.Controls.Add(this.button7);
+            this.tabAutomaticCheck.Controls.Add(this.btnExportSteamGuardProtectedAccount);
             this.tabAutomaticCheck.Controls.Add(this.groupBox1);
-            this.tabAutomaticCheck.Controls.Add(this.button6);
-            this.tabAutomaticCheck.Controls.Add(this.button5);
-            this.tabAutomaticCheck.Controls.Add(this.button4);
+            this.tabAutomaticCheck.Controls.Add(this.btnExportBadAccount);
+            this.tabAutomaticCheck.Controls.Add(this.btnExportGoodAccount);
+            this.tabAutomaticCheck.Controls.Add(this.btnBrowseFile);
             this.tabAutomaticCheck.Controls.Add(this.label7);
             this.tabAutomaticCheck.Controls.Add(this.textBoxFile);
             this.tabAutomaticCheck.Controls.Add(this.label6);
@@ -206,16 +206,16 @@
             this.tabAutomaticCheck.TabIndex = 1;
             this.tabAutomaticCheck.Text = "Automatic";
             // 
-            // button8
+            // btnBrowserLocationToExport
             // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button8.Location = new System.Drawing.Point(391, 84);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(35, 25);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "...";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.Button8_Click);
+            this.btnBrowserLocationToExport.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnBrowserLocationToExport.Location = new System.Drawing.Point(391, 84);
+            this.btnBrowserLocationToExport.Name = "btnBrowserLocationToExport";
+            this.btnBrowserLocationToExport.Size = new System.Drawing.Size(35, 25);
+            this.btnBrowserLocationToExport.TabIndex = 9;
+            this.btnBrowserLocationToExport.Text = "...";
+            this.btnBrowserLocationToExport.UseVisualStyleBackColor = true;
+            this.btnBrowserLocationToExport.Click += new System.EventHandler(this.btnBrowserLocationToExport_Click);
             // 
             // textBoxLocalToExport
             // 
@@ -234,17 +234,17 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "Location to export:";
             // 
-            // button7
+            // btnExportSteamGuardProtectedAccount
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button7.Location = new System.Drawing.Point(21, 359);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(235, 24);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Export SteamGuard protected accounts...";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnExportSteamGuardProtectedAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExportSteamGuardProtectedAccount.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnExportSteamGuardProtectedAccount.Location = new System.Drawing.Point(21, 359);
+            this.btnExportSteamGuardProtectedAccount.Name = "btnExportSteamGuardProtectedAccount";
+            this.btnExportSteamGuardProtectedAccount.Size = new System.Drawing.Size(235, 24);
+            this.btnExportSteamGuardProtectedAccount.TabIndex = 7;
+            this.btnExportSteamGuardProtectedAccount.Text = "Export SteamGuard protected accounts...";
+            this.btnExportSteamGuardProtectedAccount.UseVisualStyleBackColor = true;
+            this.btnExportSteamGuardProtectedAccount.Click += new System.EventHandler(this.btnExportSteamGuardProtectedAccount_Click);
             // 
             // groupBox1
             // 
@@ -366,40 +366,40 @@
             this.label9.Text = "Loggable:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button6
+            // btnExportBadAccount
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button6.Location = new System.Drawing.Point(260, 359);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(161, 24);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Export bad accounts...";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnExportBadAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExportBadAccount.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnExportBadAccount.Location = new System.Drawing.Point(260, 359);
+            this.btnExportBadAccount.Name = "btnExportBadAccount";
+            this.btnExportBadAccount.Size = new System.Drawing.Size(161, 24);
+            this.btnExportBadAccount.TabIndex = 7;
+            this.btnExportBadAccount.Text = "Export bad accounts...";
+            this.btnExportBadAccount.UseVisualStyleBackColor = true;
+            this.btnExportBadAccount.Click += new System.EventHandler(this.btnExportBadAccount_Click);
             // 
-            // button5
+            // btnExportGoodAccount
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button5.Location = new System.Drawing.Point(21, 332);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(400, 24);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Export good accounts...";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnExportGoodAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExportGoodAccount.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnExportGoodAccount.Location = new System.Drawing.Point(21, 332);
+            this.btnExportGoodAccount.Name = "btnExportGoodAccount";
+            this.btnExportGoodAccount.Size = new System.Drawing.Size(400, 24);
+            this.btnExportGoodAccount.TabIndex = 7;
+            this.btnExportGoodAccount.Text = "Export good accounts...";
+            this.btnExportGoodAccount.UseVisualStyleBackColor = true;
+            this.btnExportGoodAccount.Click += new System.EventHandler(this.btnExportGoodAccount_Click);
             // 
-            // button4
+            // btnBrowseFile
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button4.Location = new System.Drawing.Point(391, 54);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(35, 25);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "...";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnBrowseFile.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnBrowseFile.Location = new System.Drawing.Point(391, 54);
+            this.btnBrowseFile.Name = "btnBrowseFile";
+            this.btnBrowseFile.Size = new System.Drawing.Size(35, 25);
+            this.btnBrowseFile.TabIndex = 9;
+            this.btnBrowseFile.Text = "...";
+            this.btnBrowseFile.UseVisualStyleBackColor = true;
+            this.btnBrowseFile.Click += new System.EventHandler(this.btnBrowseFile_Click);
             // 
             // label7
             // 
@@ -455,11 +455,11 @@
             // tabAbout
             // 
             this.tabAbout.BackColor = System.Drawing.Color.White;
-            this.tabAbout.Controls.Add(this.ButtonSoftwareLicense);
-            this.tabAbout.Controls.Add(this.ButtonViewThirdPartyLibraries);
+            this.tabAbout.Controls.Add(this.btnSoftwareLicense);
+            this.tabAbout.Controls.Add(this.btnViewThirdPartyLibraries);
             this.tabAbout.Controls.Add(this.pictureBox1);
             this.tabAbout.Controls.Add(this.label4);
-            this.tabAbout.Controls.Add(this.button3);
+            this.tabAbout.Controls.Add(this.btnContactMe);
             this.tabAbout.Controls.Add(this.label3);
             this.tabAbout.Location = new System.Drawing.Point(4, 24);
             this.tabAbout.Name = "tabAbout";
@@ -467,29 +467,29 @@
             this.tabAbout.TabIndex = 2;
             this.tabAbout.Text = "About";
             // 
-            // ButtonSoftwareLicense
+            // btnSoftwareLicense
             // 
-            this.ButtonSoftwareLicense.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ButtonSoftwareLicense.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ButtonSoftwareLicense.Location = new System.Drawing.Point(211, 362);
-            this.ButtonSoftwareLicense.Name = "ButtonSoftwareLicense";
-            this.ButtonSoftwareLicense.Size = new System.Drawing.Size(132, 24);
-            this.ButtonSoftwareLicense.TabIndex = 6;
-            this.ButtonSoftwareLicense.Text = "View software license";
-            this.ButtonSoftwareLicense.UseVisualStyleBackColor = true;
-            this.ButtonSoftwareLicense.Click += new System.EventHandler(this.ButtonViewSoftwareLicense_Click);
+            this.btnSoftwareLicense.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSoftwareLicense.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSoftwareLicense.Location = new System.Drawing.Point(211, 362);
+            this.btnSoftwareLicense.Name = "btnSoftwareLicense";
+            this.btnSoftwareLicense.Size = new System.Drawing.Size(132, 24);
+            this.btnSoftwareLicense.TabIndex = 6;
+            this.btnSoftwareLicense.Text = "View software license";
+            this.btnSoftwareLicense.UseVisualStyleBackColor = true;
+            this.btnSoftwareLicense.Click += new System.EventHandler(this.ButtonViewSoftwareLicense_Click);
             // 
-            // ButtonViewThirdPartyLibraries
+            // btnViewThirdPartyLibraries
             // 
-            this.ButtonViewThirdPartyLibraries.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ButtonViewThirdPartyLibraries.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ButtonViewThirdPartyLibraries.Location = new System.Drawing.Point(345, 362);
-            this.ButtonViewThirdPartyLibraries.Name = "ButtonViewThirdPartyLibraries";
-            this.ButtonViewThirdPartyLibraries.Size = new System.Drawing.Size(162, 24);
-            this.ButtonViewThirdPartyLibraries.TabIndex = 6;
-            this.ButtonViewThirdPartyLibraries.Text = "View third party libraries...";
-            this.ButtonViewThirdPartyLibraries.UseVisualStyleBackColor = true;
-            this.ButtonViewThirdPartyLibraries.Click += new System.EventHandler(this.ButtonViewThirdPartyLibraries_Click);
+            this.btnViewThirdPartyLibraries.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnViewThirdPartyLibraries.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnViewThirdPartyLibraries.Location = new System.Drawing.Point(345, 362);
+            this.btnViewThirdPartyLibraries.Name = "btnViewThirdPartyLibraries";
+            this.btnViewThirdPartyLibraries.Size = new System.Drawing.Size(162, 24);
+            this.btnViewThirdPartyLibraries.TabIndex = 6;
+            this.btnViewThirdPartyLibraries.Text = "View third party libraries...";
+            this.btnViewThirdPartyLibraries.UseVisualStyleBackColor = true;
+            this.btnViewThirdPartyLibraries.Click += new System.EventHandler(this.ButtonViewThirdPartyLibraries_Click);
             // 
             // pictureBox1
             // 
@@ -509,20 +509,20 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(266, 45);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Made by 𝙨𝙬𝙤𝙤𝙨𝙝#1673\r\nsext is a faggit";
+            this.label4.Text = "Update by KingNNT";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button3
+            // btnContactMe
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Location = new System.Drawing.Point(510, 362);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 24);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Copy Discord name";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnContactMe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnContactMe.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnContactMe.Location = new System.Drawing.Point(510, 362);
+            this.btnContactMe.Name = "btnContactMe";
+            this.btnContactMe.Size = new System.Drawing.Size(132, 24);
+            this.btnContactMe.TabIndex = 6;
+            this.btnContactMe.Text = "Contact Me";
+            this.btnContactMe.UseVisualStyleBackColor = true;
+            this.btnContactMe.Click += new System.EventHandler(this.btnContactMe_Click);
             // 
             // label3
             // 
@@ -536,17 +536,60 @@
             this.label3.Text = "Steam Account Checker";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // contextMenuStrip1
+            // listViewResult
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listViewResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listViewResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.StatusColumn,
+            this.UsernameColumn,
+            this.PasswordColumn,
+            this.ResultColumn});
+            this.listViewResult.ContextMenuStrip = this.ctxMenuStrip;
+            this.listViewResult.FullRowSelect = true;
+            this.listViewResult.GridLines = true;
+            this.listViewResult.HideSelection = false;
+            this.listViewResult.Location = new System.Drawing.Point(455, 40);
+            this.listViewResult.Name = "listViewResult";
+            this.listViewResult.Size = new System.Drawing.Size(410, 400);
+            this.listViewResult.TabIndex = 5;
+            this.listViewResult.UseCompatibleStateImageBehavior = false;
+            this.listViewResult.View = System.Windows.Forms.View.Details;
+            // 
+            // StatusColumn
+            // 
+            this.StatusColumn.Name = "StatusColumn";
+            this.StatusColumn.Text = "Status";
+            this.StatusColumn.Width = 45;
+            // 
+            // UsernameColumn
+            // 
+            this.UsernameColumn.Name = "UsernameColumn";
+            this.UsernameColumn.Text = "Username";
+            this.UsernameColumn.Width = 90;
+            // 
+            // PasswordColumn
+            // 
+            this.PasswordColumn.Name = "PasswordColumn";
+            this.PasswordColumn.Text = "Password";
+            this.PasswordColumn.Width = 90;
+            // 
+            // ResultColumn
+            // 
+            this.ResultColumn.Name = "ResultColumn";
+            this.ResultColumn.Text = "Result";
+            this.ResultColumn.Width = 180;
+            // 
+            // ctxMenuStrip
+            // 
+            this.ctxMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem4,
             this.toolStripSeparator1,
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3});
-            this.contextMenuStrip1.Name = "contextMSAutomaticAccounts";
-            this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(204, 98);
+            this.ctxMenuStrip.Name = "contextMSAutomaticAccounts";
+            this.ctxMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.ctxMenuStrip.Size = new System.Drawing.Size(204, 98);
             // 
             // toolStripMenuItem4
             // 
@@ -580,52 +623,6 @@
             this.toolStripMenuItem3.Size = new System.Drawing.Size(203, 22);
             this.toolStripMenuItem3.Text = "Copy selected password";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
-            // whatsHappening
-            // 
-            this.whatsHappening.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.whatsHappening.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.whatsHappening.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.StatusColumn,
-            this.UsernameColumn,
-            this.PasswordColumn,
-            this.ResultColumn});
-            this.whatsHappening.ContextMenuStrip = this.contextMenuStrip1;
-            this.whatsHappening.FullRowSelect = true;
-            this.whatsHappening.GridLines = true;
-            this.whatsHappening.HideSelection = false;
-            this.whatsHappening.Location = new System.Drawing.Point(453, 35);
-            this.whatsHappening.Name = "whatsHappening";
-            this.whatsHappening.Size = new System.Drawing.Size(416, 403);
-            this.whatsHappening.TabIndex = 5;
-            this.whatsHappening.UseCompatibleStateImageBehavior = false;
-            this.whatsHappening.View = System.Windows.Forms.View.Details;
-            // 
-            // StatusColumn
-            // 
-            this.StatusColumn.Name = "StatusColumn";
-            this.StatusColumn.Text = "Status";
-            this.StatusColumn.Width = 45;
-            // 
-            // UsernameColumn
-            // 
-            this.UsernameColumn.Name = "UsernameColumn";
-            this.UsernameColumn.Text = "Username";
-            this.UsernameColumn.Width = 90;
-            // 
-            // PasswordColumn
-            // 
-            this.PasswordColumn.Name = "PasswordColumn";
-            this.PasswordColumn.Text = "Password";
-            this.PasswordColumn.Width = 90;
-            // 
-            // ResultColumn
-            // 
-            this.ResultColumn.Name = "ResultColumn";
-            this.ResultColumn.Text = "Result";
-            this.ResultColumn.Width = 180;
             // 
             // loadingImage
             // 
@@ -689,17 +686,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(884, 486);
+            this.Controls.Add(this.listViewResult);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.whatsHappening);
-            this.Controls.Add(this.ButtonStart);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.btnCheckAccounts);
+            this.Controls.Add(this.tabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(900, 525);
             this.Name = "MainWindow";
             this.Text = "Steam Account Checker";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.MainWindow_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.tabManualCheck.ResumeLayout(false);
             this.tabManualCheck.PerformLayout();
             this.tabAutomaticCheck.ResumeLayout(false);
@@ -710,7 +707,7 @@
             this.tabAbout.ResumeLayout(false);
             this.tabAbout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.ctxMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.loadingImage)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -725,10 +722,10 @@
         private System.Windows.Forms.TabPage tabAutomaticCheck;
         private System.Windows.Forms.TabPage tabAbout;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnContactMe;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBrowseFile;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -737,37 +734,32 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnExportGoodAccount;
+        private System.Windows.Forms.Button btnExportBadAccount;
+        private System.Windows.Forms.Button btnExportSteamGuardProtectedAccount;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button8;
-        public System.Windows.Forms.Button ButtonStart;
+        private System.Windows.Forms.Button btnBrowserLocationToExport;
+        public System.Windows.Forms.Button btnCheckAccounts;
         public System.Windows.Forms.Label badLabel;
         public System.Windows.Forms.Label steamGuardLabel;
         public System.Windows.Forms.Label loggableLabel;
         public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtSteamAccountName;
         public System.Windows.Forms.TextBox textBoxFile;
         public System.Windows.Forms.Label remainingLabel;
         public System.Windows.Forms.Label checkedLabel;
         private System.Windows.Forms.TabPage tabSettings;
         private System.Windows.Forms.CheckBox CheckboxShowColouredItemsInAccountList;
         public System.Windows.Forms.TextBox textBoxLocalToExport;
-        private System.Windows.Forms.Button ButtonViewThirdPartyLibraries;
+        private System.Windows.Forms.Button btnViewThirdPartyLibraries;
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        public System.Windows.Forms.ColumnHeader StatusColumn;
-        public System.Windows.Forms.ColumnHeader UsernameColumn;
-        public System.Windows.Forms.ColumnHeader PasswordColumn;
-        public System.Windows.Forms.ColumnHeader ResultColumn;
         public System.Windows.Forms.PictureBox loadingImage;
-        public System.Windows.Forms.ListView whatsHappening;
         public System.Windows.Forms.Label labelStatus;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip ctxMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
@@ -777,8 +769,20 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.Button ButtonSoftwareLicense;
+        private System.Windows.Forms.Button btnSoftwareLicense;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button oo;
+        private System.Windows.Forms.Button Bro;
+        public System.Windows.Forms.Button C;
+        public System.Windows.Forms.ListView ist;
+        public System.Windows.Forms.TextBox Stea;
+        public System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.TabControl tabControl;
+        public System.Windows.Forms.ListView listViewResult;
+        public System.Windows.Forms.ColumnHeader StatusColumn;
+        public System.Windows.Forms.ColumnHeader UsernameColumn;
+        public System.Windows.Forms.ColumnHeader PasswordColumn;
+        public System.Windows.Forms.ColumnHeader ResultColumn;
     }
 }
 

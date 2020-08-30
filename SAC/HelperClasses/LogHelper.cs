@@ -31,7 +31,7 @@ namespace SAC.HelperClasses
             if (Program.mw.InvokeRequired)
             {
                 SetListAccountsCallback d = new SetListAccountsCallback(ListAccountOnGUI);
-                Program.mw.whatsHappening.Invoke(d, new object[] { result, userName, password, extendedResultMessage });
+                Program.mw.listViewResult.Invoke(d, new object[] { result, userName, password, extendedResultMessage });
             }
             else
             {
@@ -44,7 +44,7 @@ namespace SAC.HelperClasses
                         successItem.SubItems.Add(userName);
                         successItem.SubItems.Add(password);
                         successItem.SubItems.Add(extendedResultMessage);
-                        Program.mw.whatsHappening.Items.Add(successItem);
+                        Program.mw.listViewResult.Items.Add(successItem);
                         break;
                     case Result.SteamGuardProtected:
                         ListViewItem sgProtectedItem = new ListViewItem("🗲");
@@ -53,7 +53,7 @@ namespace SAC.HelperClasses
                         sgProtectedItem.SubItems.Add(userName);
                         sgProtectedItem.SubItems.Add(password);
                         sgProtectedItem.SubItems.Add(extendedResultMessage);
-                        Program.mw.whatsHappening.Items.Add(sgProtectedItem);
+                        Program.mw.listViewResult.Items.Add(sgProtectedItem);
                         break;
                     case Result.Fail:
                         ListViewItem failItem = new ListViewItem("✘");
@@ -62,7 +62,7 @@ namespace SAC.HelperClasses
                         failItem.SubItems.Add(userName);
                         failItem.SubItems.Add(password);
                         failItem.SubItems.Add(extendedResultMessage);
-                        Program.mw.whatsHappening.Items.Add(failItem);
+                        Program.mw.listViewResult.Items.Add(failItem);
                         break;
                     default:
                         ListViewItem unknownItem = new ListViewItem("???");
@@ -71,7 +71,7 @@ namespace SAC.HelperClasses
                         unknownItem.SubItems.Add(userName);
                         unknownItem.SubItems.Add(password);
                         unknownItem.SubItems.Add($"APPLICATION EXCEPTION. FIX ASAP! -- {extendedResultMessage}");
-                        Program.mw.whatsHappening.Items.Add(unknownItem);
+                        Program.mw.listViewResult.Items.Add(unknownItem);
                         break;
                 }
             }
@@ -81,7 +81,7 @@ namespace SAC.HelperClasses
         public static void LogClear()
         {
             if (!Program.mw.InvokeRequired)
-                Program.mw.whatsHappening.Clear();
+                Program.mw.listViewResult.Clear();
             else
                 MessageBox.Show("jxhdjkxdhjk lmao Invoke required on control 'whatsHappening'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

@@ -1,10 +1,10 @@
 ﻿using SAC.HelperClasses;
+using SAC.Models;
+using SteamAccountChecker.Properties;
 using System;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
-using SAC.Models;
-using SteamAccountChecker.Properties;
 
 namespace SAC.Views
 {
@@ -17,11 +17,11 @@ namespace SAC.Views
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw, true);
             loadingImage.Image = Resources.loading;
             pictureBox1.BackgroundImage = Resources.icon;
-            tabControl1.SelectedIndex = 3;
 
-            whatsHappening.Visible = false;
+            tabControl.SelectedIndex = 0;
+            listViewResult.Visible = true;
+            btnCheckAccounts.Enabled = true;
             loadingImage.Visible = false;
-            ButtonStart.Enabled = false;
         }
 
         //well this will have to do to fix the lag when resizing............
@@ -41,7 +41,7 @@ namespace SAC.Views
 
         private void ButtonStart_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex == 1)
+            if (tabControl.SelectedIndex == 1)
             {
                 try
                 {
@@ -82,9 +82,9 @@ namespace SAC.Views
                     MessageBox.Show($"Failed. Error: {ex.Message}", "Internal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else if (tabControl1.SelectedIndex == 0)
+            else if (tabControl.SelectedIndex == 0)
             {
-                if (Program.mw.textBox1.Text == "" | Program.mw.textBox2.Text == "")
+                if (Program.mw.txtSteamAccountName.Text == "" | Program.mw.txtPassword.Text == "")
                     MessageBox.Show("You need to enter a username and password", "Manual Check", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                 {
@@ -128,9 +128,9 @@ namespace SAC.Views
             LogHelper.Log("✔ Done");
         }
 
-        private void button3_Click(object sender, EventArgs e) => ClipboardHelper.CopyDiscord();
+        private void btnContactMe_Click(object sender, EventArgs e) => ClipboardHelper.CopyDiscord();
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnBrowseFile_Click(object sender, EventArgs e)
         {
             try
             {
@@ -158,13 +158,13 @@ namespace SAC.Views
             }
         }
 
-        private void button5_Click(object sender, EventArgs e) => AccountExporterHelper.Export(AccountExporterHelper.WhatToExport.GOODACCOUNTS);
+        private void btnExportGoodAccount_Click(object sender, EventArgs e) => AccountExporterHelper.Export(AccountExporterHelper.WhatToExport.GOODACCOUNTS);
 
-        private void button6_Click(object sender, EventArgs e) => AccountExporterHelper.Export(AccountExporterHelper.WhatToExport.BADCCOUNTS);
+        private void btnExportBadAccount_Click(object sender, EventArgs e) => AccountExporterHelper.Export(AccountExporterHelper.WhatToExport.BADCCOUNTS);
 
-        private void button7_Click(object sender, EventArgs e) => AccountExporterHelper.Export(AccountExporterHelper.WhatToExport.SGPROTECTEDACCOUNTS);
+        private void btnExportSteamGuardProtectedAccount_Click(object sender, EventArgs e) => AccountExporterHelper.Export(AccountExporterHelper.WhatToExport.SGPROTECTEDACCOUNTS);
 
-        private void Button8_Click(object sender, EventArgs e) => WindowsDialogsHelper.FindPlaceToExport();
+        private void btnBrowserLocationToExport_Click(object sender, EventArgs e) => WindowsDialogsHelper.FindPlaceToExport();
 
         private void checkShowPasswordInLogs_CheckedChanged(object sender, EventArgs e)
         {
@@ -178,23 +178,22 @@ namespace SAC.Views
 
         private void ButtonViewSoftwareLicense_Click(object sender, EventArgs e) => Program.vSLWindow.ShowDialog();
 
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex == 1)
+            if (tabControl.SelectedIndex == 1)
             {
-                whatsHappening.Visible = true;
-                ButtonStart.Enabled = true;
+                listViewResult.Visible = true;
+                btnCheckAccounts.Enabled = true;
             }
-            else if (tabControl1.SelectedIndex == 0)
+            else if (tabControl.SelectedIndex == 0)
             {
-                whatsHappening.Visible = true;
-                ButtonStart.Enabled = true;
+                listViewResult.Visible = true;
+                btnCheckAccounts.Enabled = true;
             }
             else
             {
-                whatsHappening.Visible = false;
-                ButtonStart.Enabled = false;
+                listViewResult.Visible = false;
+                btnCheckAccounts.Enabled = false;
             }
         }
 
@@ -215,7 +214,7 @@ namespace SAC.Views
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             //Copy username and password of selected
-            ListView.SelectedListViewItemCollection selectedItems = whatsHappening.SelectedItems;
+            ListView.SelectedListViewItemCollection selectedItems = listViewResult.SelectedItems;
             string clipboardText = "";
             foreach (ListViewItem item in selectedItems)
                 clipboardText += item.SubItems[1].Text + ":" + item.SubItems[2].Text + "\n";
@@ -233,7 +232,7 @@ namespace SAC.Views
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             //Copy username of selected
-            ListView.SelectedListViewItemCollection selectedItems = whatsHappening.SelectedItems;
+            ListView.SelectedListViewItemCollection selectedItems = listViewResult.SelectedItems;
             string clipboardText = "";
             foreach (ListViewItem item in selectedItems)
                 clipboardText += item.SubItems[1].Text + "\n";
@@ -251,7 +250,7 @@ namespace SAC.Views
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             //Copy password of selected
-            ListView.SelectedListViewItemCollection selectedItems = whatsHappening.SelectedItems;
+            ListView.SelectedListViewItemCollection selectedItems = listViewResult.SelectedItems;
             string clipboardText = "";
             foreach (ListViewItem item in selectedItems)
                 clipboardText += item.SubItems[2].Text + "\n";
@@ -269,7 +268,7 @@ namespace SAC.Views
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             //Copy all
-            ListView.ListViewItemCollection selectedItems = whatsHappening.Items;
+            ListView.ListViewItemCollection selectedItems = listViewResult.Items;
             string clipboardText = "";
             foreach (ListViewItem item in selectedItems)
                 clipboardText += item.SubItems[1].Text + ":" + item.SubItems[2].Text + "\n";

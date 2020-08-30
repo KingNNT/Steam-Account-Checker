@@ -27,12 +27,12 @@
             if (Program.mw.InvokeRequired)
             {
                 SetEnabledCallback d = new SetEnabledCallback(EnableUI);
-                Program.mw.tabControl1.Invoke(d, new object[] { isEnabled });
+                Program.mw.tabControl.Invoke(d, new object[] { isEnabled });
             }
             else
             {
-                Program.mw.tabControl1.Enabled = isEnabled;
-                Program.mw.ButtonStart.Enabled = isEnabled;
+                Program.mw.tabControl.Enabled = isEnabled;
+                Program.mw.btnCheckAccounts.Enabled = isEnabled;
             }
         }
 

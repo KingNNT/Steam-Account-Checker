@@ -5,18 +5,18 @@ using System.Windows.Forms;
 
 namespace SAC.Models
 {
-    class AccountChecker
+    internal class AccountChecker
     {
         private static int firstUsername = 0; //Do not change - gets >username<  :password
         private static int firstPassword = 1; //Do not change - gets username:  >password<
 
-        delegate void SetVisibilityCallback(bool isVisible);
+        private delegate void SetVisibilityCallback(bool isVisible);
 
         public static void CheckManually()
         {
             LogHelper.Log("⌛ Starting manual check...\n");
-            SteamAccountHelper.userName = Program.mw.textBox1.Text;
-            SteamAccountHelper.password = Program.mw.textBox2.Text;
+            SteamAccountHelper.userName = Program.mw.txtSteamAccountName.Text;
+            SteamAccountHelper.password = Program.mw.txtPassword.Text;
 
             SteamAccountHelper.steamClient = new SteamClient();
 
@@ -86,7 +86,6 @@ namespace SAC.Models
             }
         }
 
-
         public static void CleanupUpdate() // Cleans up any left-overs from the last session to avoid conflict and errors
         {
             SteamAccountHelper.userName = string.Empty;
@@ -107,6 +106,5 @@ namespace SAC.Models
             firstUsername = 0; //Do not change
             firstPassword = 1; //Do not change
         }
-
     }
 }
