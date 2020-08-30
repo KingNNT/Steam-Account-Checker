@@ -538,7 +538,7 @@
             // 
             // listViewResult
             // 
-            this.listViewResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listViewResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.StatusColumn,
             this.UsernameColumn,
@@ -548,9 +548,9 @@
             this.listViewResult.FullRowSelect = true;
             this.listViewResult.GridLines = true;
             this.listViewResult.HideSelection = false;
-            this.listViewResult.Location = new System.Drawing.Point(455, 40);
+            this.listViewResult.Location = new System.Drawing.Point(450, 40);
             this.listViewResult.Name = "listViewResult";
-            this.listViewResult.Size = new System.Drawing.Size(410, 400);
+            this.listViewResult.Size = new System.Drawing.Size(410, 390);
             this.listViewResult.TabIndex = 5;
             this.listViewResult.UseCompatibleStateImageBehavior = false;
             this.listViewResult.View = System.Windows.Forms.View.Details;
