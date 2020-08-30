@@ -5,16 +5,18 @@ namespace SAC.HelperClasses
 {
     class ClipboardHelper
     {
-        public static void CopyDiscord()
+        public static void OpenBrowser()
         {
             try
             {
-                Clipboard.SetText("𝙨𝙬𝙤𝙤𝙨𝙝#1673");
-                MessageBox.Show("'𝙨𝙬𝙤𝙤𝙨𝙝#1673' was copied to your clipboard", "Clipboard", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                System.Diagnostics.Process.Start("https://www.facebook.com/Kinggg.NNT/");
+                Clipboard.SetText("https://www.facebook.com/Kinggg.NNT/");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed. Error: {ex.Message}", "Internal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show($"Failed. Error: {ex.Message}", "Internal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Clipboard.SetText("https://www.facebook.com/Kinggg.NNT/");
+                MessageBox.Show($"Cannot Open Browser. My Infomation copied to clipboard. Please, paste to your browser and go to", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

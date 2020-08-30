@@ -7,6 +7,7 @@ namespace SAC.Views
     {
         public ViewThirdPartyLibraries() => InitializeComponent();
 
-        private void button1_Click(object sender, EventArgs e) => Close();
+        private void btnOK_Click(object sender, EventArgs e) => Close();
+
     }
 }

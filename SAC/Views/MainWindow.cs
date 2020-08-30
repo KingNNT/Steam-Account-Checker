@@ -128,7 +128,7 @@ namespace SAC.Views
             LogHelper.Log("✔ Done");
         }
 
-        private void btnContactMe_Click(object sender, EventArgs e) => ClipboardHelper.CopyDiscord();
+        private void btnContactMe_Click(object sender, EventArgs e) => ClipboardHelper.OpenBrowser();
 
         private void btnBrowseFile_Click(object sender, EventArgs e)
         {
